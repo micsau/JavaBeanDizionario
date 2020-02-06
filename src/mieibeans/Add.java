@@ -18,7 +18,7 @@ public class Add implements java.io.Serializable{
 public String getAdd(){
     try{
         Class.forName("com.mysql.cj.jdbc.Driver");
-        Connection conn = DriverManager.getConnection("jdbc:mysql://remotemysql.com/vlIGVKqVUg?user=vlIGVKqVUg&password=bcMVQ0ApRc");
+        Connection conn = DriverManager.getConnection("jdbc:mysql://remotemysql.com/vlIGVKqVUg?user=vlIGVKqVUg&password=R6OA2FGr12");
         Statement stmt = conn.createStatement();
         ResultSet rs = stmt.executeQuery("Select parola FROM Words WHERE parola='"+parola+"'");
         while(rs.next()){

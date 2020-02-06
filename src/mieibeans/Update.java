@@ -17,7 +17,7 @@ public class Update implements java.io.Serializable{
 public String getUpdate(){
     try {
         Class.forName("com.mysql.cj.jdbc.Driver");
-        Connection conn = DriverManager.getConnection("jdbc:mysql://remotemysql.com/vlIGVKqVUg?user=vlIGVKqVUg&password=bcMVQ0ApRc");
+        Connection conn = DriverManager.getConnection("jdbc:mysql://remotemysql.com/vlIGVKqVUg?user=vlIGVKqVUg&password=R6OA2FGr12");
         Statement stmt = conn.createStatement();
         stmt.executeUpdate("UPDATE Words SET significato ='"+significato+"' WHERE parola ='"+parola+"'");
             result = "parola";

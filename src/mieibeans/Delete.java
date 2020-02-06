@@ -18,7 +18,7 @@ public class Delete implements java.io.Serializable{
 public String getDelete(){
     try{
         Class.forName("com.mysql.cj.jdbc.Driver");
-        Connection conn = DriverManager.getConnection("jdbc:mysql://remotemysql.com/vlIGVKqVUg?user=vlIGVKqVUg&password=bcMVQ0ApRc");
+        Connection conn = DriverManager.getConnection("jdbc:mysql://remotemysql.com/vlIGVKqVUg?user=vlIGVKqVUg&password=R6OA2FGr12");
         Statement stmt = conn.createStatement();
         stmt.executeUpdate("DELETE FROM Words WHERE parola='"+parola+"'");
         result = "parola";
