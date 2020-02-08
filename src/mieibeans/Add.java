@@ -20,7 +20,7 @@ public String getAdd(){
         Class.forName("com.mysql.cj.jdbc.Driver");
         Connection conn = DriverManager.getConnection("jdbc:mysql://remotemysql.com/vlIGVKqVUg?user=vlIGVKqVUg&password=R6OA2FGr12");
         Statement stmt = conn.createStatement();
-        ResultSet rs = stmt.executeQuery("Select parola FROM Words WHERE parola='"+parola+"'");
+        ResultSet rs = stmt.executeQuery("Select parola FROM WORDS WHERE parola='"+parola+"'");
         while(rs.next()){
             result=rs.getString("parola");
         }
@@ -28,7 +28,7 @@ public String getAdd(){
             return "AVVISO, il termine da te cercato esiste già all'interno del database! riprova con altri termini.";
         }
         else{
-            stmt.executeUpdate("INSERT into Words(parola,significato) VALUES('"+parola+"','"+significato+"')");
+            stmt.executeUpdate("INSERT into WORDS(parola,significato) VALUES('"+parola+"','"+significato+"')");
         }
         return "Parola inserita correttamente";
     }catch(Exception e){

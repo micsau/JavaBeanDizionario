@@ -21,7 +21,7 @@ public String getFind(){
         Class.forName("com.mysql.cj.jdbc.Driver");
         Connection conn = DriverManager.getConnection("jdbc:mysql://remotemysql.com/vlIGVKqVUg?user=vlIGVKqVUg&password=R6OA2FGr12");
         Statement stmt = conn.createStatement();
-        ResultSet rs = stmt.executeQuery("Select parola,significato FROM Words WHERE parola = '"+parola+"'");
+        ResultSet rs = stmt.executeQuery("Select parola,significato FROM WORDS WHERE parola = '"+parola+"'");
         while(rs.next()){
             result=rs.getString("significato");
         }

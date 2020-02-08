@@ -20,7 +20,7 @@ public String getDelete(){
         Class.forName("com.mysql.cj.jdbc.Driver");
         Connection conn = DriverManager.getConnection("jdbc:mysql://remotemysql.com/vlIGVKqVUg?user=vlIGVKqVUg&password=R6OA2FGr12");
         Statement stmt = conn.createStatement();
-        stmt.executeUpdate("DELETE FROM Words WHERE parola='"+parola+"'");
+        stmt.executeUpdate("DELETE FROM WORDS WHERE parola='"+parola+"'");
         result = "parola";
         if(result != null){
         return "Parola eliminata correttamente";

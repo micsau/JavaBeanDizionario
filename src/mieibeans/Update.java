@@ -19,7 +19,7 @@ public String getUpdate(){
         Class.forName("com.mysql.cj.jdbc.Driver");
         Connection conn = DriverManager.getConnection("jdbc:mysql://remotemysql.com/vlIGVKqVUg?user=vlIGVKqVUg&password=R6OA2FGr12");
         Statement stmt = conn.createStatement();
-        stmt.executeUpdate("UPDATE Words SET significato ='"+significato+"' WHERE parola ='"+parola+"'");
+        stmt.executeUpdate("UPDATE WORDS SET significato ='"+significato+"' WHERE parola ='"+parola+"'");
             result = "parola";
         if(result != null){
             return "Hai modificato correttamente i tuoi dati";
